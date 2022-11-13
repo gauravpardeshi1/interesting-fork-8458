@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy With Nykaa Online in India best Nykaa.com</title>
+    <link rel="icon" type="image/x-icon" href="https://bootstraplogos.com/wp-content/uploads/edd/2018/10/logo-2.png" />
+    
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div id="mainbar12">
+        <!-- Dont make any changes here -->
+        <h3 id="h3">PLEASE ENTER OTP</h3>
+    
+       
+          <!-- ***** We are using form here  ****  -->
+          <form id="form1">
+           
+            <input  type="number" id="name" placeholder="Enter OTP here" /><br />
+            <button id="but">PAY</button>
+          
+           
+          </form>
+   
+        </div>
+</body>
+</html>
+<script>
+    document.querySelector("#but").addEventListener("click",function(){
+        let y= document.querySelector("#name").value
+   if(y==1234){
+  
+
+    window.location.href="index.html"
+
+    alert("Payment Succesful")
+   } if(y!=1234){
+    alert("Wrong OTP")
+   }else if(y==""){
+    alert("please enter otp")
+   }
+        
+       
+    })
+
+  
+</script>

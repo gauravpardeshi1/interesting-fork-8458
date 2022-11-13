@@ -19,6 +19,9 @@ if(  email==email1 && pass==pass1){
        
     alert("sign-in succesfully")
     
+    
+    window.location.href="index.html"
+    
 }else if(email=="" && pass==""){
     alert("Please fill the details")
 
