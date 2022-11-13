@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy With Nykaa Online in India best Nykaa.com</title>
+    <link rel="icon" type="image/x-icon" href="https://bootstraplogos.com/wp-content/uploads/edd/2018/10/logo-2.png" />
+    <style>
+        #container{
+
+margin: auto;
+margin-top: 50px;
+
+width:90%;
+height:auto;
+display:flex;
+
+}
+#container{
+    width:70%;
+    height:auto;
+  
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+   
+}
+
+#container>div{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    text-align: center;
+   
+}
+button{
+    margin-bottom: 20px;
+    padding:10px 50px;
+    border: none;
+    background-color:  rgb(236, 157, 10);
+    color:white;
+    margin-top: 10px;
+    
+}
+
+#gh{
+    display: flex;
+}
+
+
+h1{
+    text-align: center;
+}
+
+
+#button{
+    background-color: green;
+}
+
+
+
+#body{
+   
+    display: flex;
+    gap: 30px;
+}
+
+
+#display{
+    margin-top: 110px;
+    margin-bottom: 150px;
+    margin-left: 30px;
+  padding-left: 40px;
+  padding-right: 30px;
+  padding-top: 30px;
+    background-color: rgb(64, 75, 64);
+    color: white;
+    border-radius: 1rem;
+}
+
+button:hover{
+    background-color: green;
+}
+
+    </style>
+
+
+
+
+
+   
+</head>
+<body><div id="body">
+    <div id="display">
+        <h2 id="total">Total Amout :- <span id="cart-total">0</span></h2>
+        <h2>Your Discount is 20%</h2>
+        <h1 id="total">Final Price :- <span id="cart-total1">0</span></h1>
+        <button id="pro">Proceed</button>
+
+    </div>
+    
+    <div id="container"></div>
+    </div>
+</body>
+</html>
+<script>
+     let cartItems=JSON.parse(localStorage.getItem("cart"))||[]
+  console.log(cartItems)
+ 
+displaycard(cartItems)
+   
+  
+
+  function displaycard(data){
+  document.querySelector("#container").innerHTML="";
+  data.forEach(function(el){
+    let div=document.createElement("div")
+    let img=document.createElement("img")
+    img.setAttribute("src",el.img)
+    let des=document.createElement("p")
+    des.innerText=el.des
+    let price=document.createElement("p")
+    price.innerText=el.price
+    let btn1=document.createElement("button")
+    btn1.innerText="Remove"
+    let btn=document.createElement("button")
+    btn.innerText="Buy Now"
+    btn.addEventListener("click",function(){
+
+    
+    window.location.href="payment.html"
+    })
+   
+    
+    
+    
+          
+
+
+    div.append(img,des,price,btn1,btn)
+    document.querySelector("#container").append(div)
+
+  
+    
+  })
+}
+
+let total=cartItems.reduce((acc,el)=>acc   + el.price,0)
+  document.querySelector("#cart-total").innerText=total
+
+displaycard(cartItems)
+
+document.querySelector("#cart-total1").innerText=total-((total*20)/100)
+
+document.querySelector("#pro").addEventListener("click",function(){
+    window.location.href="payment.html"
+})
+
+</script>

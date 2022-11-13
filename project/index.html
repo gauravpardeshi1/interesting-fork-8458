@@ -24,7 +24,7 @@
         
       }
         .nav-child1{
-           margin-right: 80px;
+           margin-right: 200px;
            
             display: flex;
             gap:15px;
@@ -50,7 +50,7 @@
             display: flex;
             height: 60px;
             width:40%;
-            gap:30px;
+            gap:0px;
             text-align: center;
             margin-top: 5px;
             margin-right: 30px;
@@ -647,15 +647,23 @@ img {
     position: absolute;
     
 }
+
+#ba{
+    width: 160px;
+}
+.nav-child1>p{
+    font-size: 17px;
+}
+
     </style>
 </head>
 <body>
     <div id="nav">
         <div id="para">BEAUTY BONANZA Get Your Daily Dose Of Amazing Deals
         </div>
-        <div class="nav-child1"><p>Get app | </p>
-        <p>Store & Events | </p>
-        <p>Gift Card | </p>
+        <div class="nav-child1"><p>Get app    | </p>
+       <p>Store & Events    | </p>
+        <p>Gift Card    | </p>
         <p>Help </p></div>
     </div>
     <div class="nav-child">
@@ -668,25 +676,24 @@ img {
             <h4>Beauty advice</h4>
         </div>
         <div id="banner-child">
-            <input placeholder="Search your product here with nykaa" name="search-suggestions-nykaa" autocomplete="off" class="css-1upamjb">
+            <input id="input" oninput="myfun()" placeholder="Search your product here with nykaa" name="search-suggestions-nykaa" autocomplete="off" class="css-1upamjb">
             <h2><a href="./signup.html">Account</a></h2>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbT5eDBKfh-Ear9cZt9Tg7KtQioXyxRTHVYA&usqp=CAU"/>
+            <a id="ba" href="./cart.html"> <img   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbT5eDBKfh-Ear9cZt9Tg7KtQioXyxRTHVYA&usqp=CAU"/> </a>
         </div>
     </div>
     <div id="banner2">
-        <p>Makeup  
+     <a href="./mens.html"> <p>Makeup  
             
-        </p>
+        </p></a>
 
-        <p>Skin</p>
-        <p>Hair</p>
-        <p>Appliances</p>
-        <p>Bath & Body</p>
-        <p>Natural</p>
-        <p>Mom & Baby</p>
-        <p>Health & Wellness</p>
-        <p>Men
-        </p>
+        <a href="./mens.html"> <p>Skin</p></a>
+     <a href="./womens.html"  > <p>Hair</p></a>
+          <p>Appliances</p>
+        <p>Bath & Body</p>        <a href="./womens.html"  >     <p>Natural</p></a>
+           <p>Mom & Baby</p>
+          <p>Health & Wellness</p>
+        <a href="./mens.html">  <p>Men
+        </p></a>
         <p>Fragrance</p>
         <p>Pop Ups</p>
         <a target="_blank" href="index.html" class="Offers" "></a>
@@ -1011,37 +1018,22 @@ img {
     },1500)
    
 
-    let a=0;
-    var y 
-   let data1 =["https://images-static.nykaa.com/uploads/5b47c37e-e0fe-47d7-9c60-f719ff6e75d3.jpg?tr=w-1200,cm-pad_resize",
-"https://images-static.nykaa.com/uploads/67ab467e-3ee0-4507-8be0-e1833c30ccac.jpg?tr=w-1200,cm-pad_resize"]
-  function displayData1(data){
-    document.getElementById("im").innerHTML="" 
-    console.log(data1[i])
-    let img= document.createElement("img") 
-    img.src=data[a] 
-    document.getElementById("im").append(img)
-  }
-  displayData1(data1)
 
-  document.getElementById("pre").addEventListener("click",function(){
-    i--
-        if(a>2){
-            a=0;
-        }
-        displayData1(data)
-   
-  })
-  
-  document.getElementById("next").addEventListener("click",function(){
+  if(document.querySelector("#input").innerText==Mens){
     
-        a++
-        if(a>2){
-            a=0;
-        }
-        displayData1(data)
-   
-  })
+  }
 
+  function myfun(){
+    let x =document.querySelector("#input").value 
+    console.log(x)
+    if(x== "mens"){
+        return window.location.href="mens.html"
+    }if(x=="womens"){
+        return window.location.href="womens.html"
+    }
+   
+
+    
+  }
 
 </script>

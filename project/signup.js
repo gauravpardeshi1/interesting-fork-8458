@@ -20,6 +20,7 @@ if(email=="" && pass==""){
     localStorage.setItem("pass",JSON.stringify(arr1))
     localStorage.setItem("email",JSON.stringify(arr2))
     alert("sign-up succesfully")
+    window.location.href="signin.html"
    
 }
 

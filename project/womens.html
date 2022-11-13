@@ -33,7 +33,7 @@
 }
 h1{
     text-align: center;
-    color:crimson;
+   color:crimson;
    margin-top: 50px;
     
 }
@@ -182,13 +182,19 @@ select{
   cursor: pointer;
 }
 
+
 #ba>img{
     
     width:45%
 }
+
 button:hover{
     background-color:  rgb(95, 202, 13);
     cursor: pointer;
+}
+#se:hover{
+    cursor: pointer;
+    background-color: coral;
 }
     </style>
 </head>
@@ -212,9 +218,9 @@ button:hover{
             <h4>Beauty advice</h4>
         </div>
         <div id="banner-child">
-            <input  id="input" oninput="myfun()"  placeholder="Search your product here with nykaa" name="search-suggestions-nykaa" autocomplete="off" class="css-1upamjb">
+            <input id="input" oninput="myfun()"    placeholder="Search your product here with nykaa" name="search-suggestions-nykaa" autocomplete="off" class="css-1upamjb">
             <h2><a href="./signup.html">Account</a></h2>
-            <a id="ba" href="./cart.html"> <img   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbT5eDBKfh-Ear9cZt9Tg7KtQioXyxRTHVYA&usqp=CAU"/> </a>  
+            <a id="ba" href="./cart.html"> <img   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbT5eDBKfh-Ear9cZt9Tg7KtQioXyxRTHVYA&usqp=CAU"/> </a>
         </div>
     </div> <div id="banner2">
         <p>Makeup  
@@ -236,7 +242,7 @@ button:hover{
     </div>
   
     </div>
-    <h1>Showing Men's result Here</h1>
+    <h1>Showing Women's result Here</h1>
     
     <div id="mens">
        
@@ -264,7 +270,7 @@ button:hover{
             </select><br/>
         </div>
         <div id="main">
-           
+            
         </div>
     </div>
 </body>
@@ -272,9 +278,8 @@ button:hover{
 <script>
 
 
-
 let bag=[];
-fetch("./mens.json")
+fetch("./women.json")
 .then((res)=>res.json())
 .then((data)=>{
   bag=data
@@ -322,7 +327,6 @@ function myfun(){
 
     
   }
-
 
 
 
